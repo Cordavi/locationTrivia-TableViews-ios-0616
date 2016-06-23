@@ -40,9 +40,6 @@
                                 <accessibility key="accessibilityConfiguration" label="Locations Table">
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
-                                <connections>
-                                    <segue destination="cc1-v7-eMA" kind="push" id="gZd-GP-6bE"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,7 +47,13 @@
                             <outlet property="delegate" destination="0e2-gW-bwQ" id="fY1-rI-qY5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yDH-Ef-OsV"/>
+                    <navigationItem key="navigationItem" id="yDH-Ef-OsV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="j5p-5r-GWM">
+                            <connections>
+                                <action selector="editTapped:" destination="0e2-gW-bwQ" id="bLs-6G-DhM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZp-hV-HYg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,7 +69,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TriviaInLocation" textLabel="nqg-KI-X7Y" style="IBUITableViewCellStyleDefault" id="Hol-8A-dVC">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hol-8A-dVC" id="8U5-x4-zvC">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
