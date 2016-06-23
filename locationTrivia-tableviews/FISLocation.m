@@ -50,22 +50,20 @@
         return nil;
     }
     
-    FISTrivium *triviumWithMostLikes = self.trivia[0];
-    for (FISTrivium *currentTrivium in self.trivia) {
-        if (triviumWithMostLikes.likes < currentTrivium.likes) {
-            triviumWithMostLikes = currentTrivium;
-        }
-    }
-    return triviumWithMostLikes;
-    
-    /** solution with NSSortDescriptor
-     
-     NSSortDescriptor *sortByLikesDesc = [NSSortDescriptor sortDescriptorWithKey:@"likes"
+    NSSortDescriptor *sortByLikesDesc = [NSSortDescriptor sortDescriptorWithKey:@"likes"
      ascending:NO];
      NSArray *triviumByLikes = [self.trivia sortedArrayUsingDescriptors:@[sortByLikesDesc]];
      
      return triviumByLikes[0];
-     */
+    
+    //    FISTrivium *triviumWithMostLikes = self.trivia[0];
+    //    for (FISTrivium *currentTrivium in self.trivia) {
+    //        if (triviumWithMostLikes.likes < currentTrivium.likes) {
+    //            triviumWithMostLikes = currentTrivium;
+    //        }
+    //    }
+    //    return triviumWithMostLikes;
+     
 }
 
 @end
